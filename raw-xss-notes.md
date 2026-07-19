@@ -96,7 +96,7 @@ In lab 4 of DOM we just change the returnUrl in the address bar then find out in
 
 https://
 
-<iframe src="https://#" onload="this.src+='<img src=1 onerror=alert(1)>'">
+'''<iframe src="https://#" onload="this.src+='<img src=1 onerror=alert(1)>'">'''
 
 
 
@@ -438,7 +438,7 @@ In the simplest case, it is possible to simply close the script tag that is encl
 
 ...
 
-var input = 'controllable data here';
+//var input = 'controllable data here';
 
 ...
 
@@ -462,7 +462,7 @@ Second add a quote in the search box . in the elements we see that the quote get
 
 
 
-eg :var searchTerms = 'test\\'payload';
+//eg :var searchTerms = 'test\\'payload';
 
 &#x20;                       document.write('<img src="/resources/images/tracker.gif?searchTerms='+encodeURIComponent(searchTerms)+'">');
 
@@ -470,7 +470,7 @@ eg :var searchTerms = 'test\\'payload';
 
 so we need to get out of this script
 
-for that we use the above method by injecting
+//for that we use the above method by injecting
 
 </script><script>alert(1)</script>
 
@@ -478,7 +478,7 @@ for that we use the above method by injecting
 
 so we get this output
 
-<script> var searchTerms = '</script>        
+//<script> var searchTerms = '</script>        
 
 <script>alert(1)</script>
 
@@ -538,7 +538,7 @@ For example, if the XSS context is as follows:
 
 
 
-<a href="#" onclick="... var input='controllable data here'; ...">
+//<a href="#" onclick="... //var input='controllable data here'; ...">
 
 and the application blocks or escapes single quote characters, you can use the following payload to break out of the JavaScript string and execute your own script:
 
@@ -560,7 +560,7 @@ Lab: Stored XSS into onclick event with angle brackets and double quotes HTML-en
 
 In this lab we find that in website we need to match the specific requirements
 
-so using http:\&apos;-alert(document.domain)-\&apos;
+//so using http:\&apos;-alert(document.domain)-\&apos;
 
 we bypass the filter and alert the site
 
@@ -573,7 +573,7 @@ So in the last lab of this particular topic
 
 we cannot use any of the mentioned characters above so we go with something more creative since our content is inserted into java script literal we can simply use 
 
-${alert(1)} that would be executed 
+//${alert(1)} that would be executed 
 
 If u see this format ie
 
@@ -581,16 +581,14 @@ If u see this format ie
 
 ...
 
-var input = `controllable data here`;
+// var input = `controllable data here`;
 
 ...
 
-</script>
+//</script>
 
 **then we can easily use this maneuver**
 **Exploiting XSS vulnerabilities**
 
-
-
-&#x20;
+//&#x20;
 
